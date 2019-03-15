@@ -33,6 +33,9 @@ quiz.question_01 = function() {
 };
 
 quiz.question_02 = function() {
+
+  var Array = ['1','2','3'];
+  return Array;
   // ----------------------------------------
   //   QUESTION 02
   //   Return an array of objects
@@ -41,6 +44,17 @@ quiz.question_02 = function() {
 };
 
 quiz.question_03 = function() {
+
+  var Objects = [
+    {
+    obj1 : 'circle',
+    color: 'blue'
+    },
+    {
+      obj2:'rectangle',
+      color:'red'
+    }
+  ]
   // ----------------------------------------
   //   QUESTION 03
   //   Return an array of objects.
@@ -51,6 +65,20 @@ quiz.question_03 = function() {
 };
 
 quiz.question_04 = function(foo, bar) {
+
+  // var fun = foo.Myfunction;
+  // var fun2 = bar.Myfunction2;
+  // return foo;
+
+  return {
+    myFunction: function(){
+      return "foo";
+    },
+      bar: function(){
+        return "bar";
+      }
+  }
+
   // ----------------------------------------
   //   QUESTION 04
   //   Return an object,
@@ -60,6 +88,10 @@ quiz.question_04 = function(foo, bar) {
 };
 
 quiz.question_05 = function(someObject) {
+
+  someObject.age = 25;
+  return someObject;
+
   // ----------------------------------------
   //   QUESTION 05
   //   Add the property 'age' to someObject
@@ -73,13 +105,15 @@ quiz.question_05 = function(someObject) {
 // ----------------------------------------
 
 quiz.question_06 = function(data, carName, model, doors, color) {
+
   // ---------------------------------------------------------------
   // Find the price of the car whose name, model, and doors are provided
   // as arguments to this function.
   // Return the price.
   // ---------------------------------------------------------------
 
-  var carPrice = 0;
+  var carPrice = data.cars[carName];
+  console.log('question 6 = ' + carPrice)
   // TODO your code here
 
   return carPrice;
